@@ -238,7 +238,6 @@
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-fs.cpp" />
     <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-main.cpp" />
     <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp.cpp" />
-    <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-gesture.cpp" />
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-stream.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -248,7 +247,6 @@
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-fs.h" />
     <ClInclude Include="..\..\..\backends\platform\sdl\winuwp\portdefs.h" />
     <ClInclude Include="..\..\..\backends\platform\sdl\winuwp\winuwp.h" />
-    <ClInclude Include="..\..\..\backends\platform\sdl\winuwp\winuwp-gesture.h" />
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-stream.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>

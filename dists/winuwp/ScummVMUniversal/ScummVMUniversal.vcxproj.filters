@@ -66,9 +66,6 @@
     <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-main.cpp">
       <Filter>backend</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-gesture.cpp">
-      <Filter>backend</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-stream.cpp">
       <Filter>backend</Filter>
     </ClCompile>
@@ -89,9 +86,6 @@
       <Filter>backend</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-fs-factory.h">
-      <Filter>backend</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\backends\platform\sdl\winuwp\winuwp-gesture.h">
       <Filter>backend</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-stream.h">
