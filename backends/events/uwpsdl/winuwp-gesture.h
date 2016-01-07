@@ -1,6 +1,8 @@
+#pragma once
 #include "common/events.h"
 #include "common/scummsys.h"
 #include "common/system.h"
+#include "uwpsdl-events.h"
 
 using namespace Windows::UI::Input;
 using namespace Windows::UI::Core;
@@ -15,14 +17,15 @@ public:
 private:
 	GestureRecognizer^ _recognizer;
 	CoreCursor^ _cursor;
+	CoreWindow^ _window;
+	Windows::Foundation::Point _previous;
 
 	Common::EventManager* _eventMan;
 
 	void Init();
 
-	void OnRightTab(GestureRecognizer^ sender, RightTappedEventArgs^ e);
-	void OnTapped(GestureRecognizer^ sender, TappedEventArgs^ e);
-
+	void OnRightTap(GestureRecognizer^ sender, RightTappedEventArgs^ e);
+	void OnTap(GestureRecognizer^ sender, TappedEventArgs^ e);
 	void OnManipulationStarted(GestureRecognizer^ sender, ManipulationStartedEventArgs^ e);
 	void OnManipulationUpdated(GestureRecognizer^ sender, ManipulationUpdatedEventArgs^ e);
 	void OnManipulationCompleted(GestureRecognizer^ sender, ManipulationCompletedEventArgs^ e);

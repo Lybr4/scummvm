@@ -232,6 +232,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\backends\events\uwpsdl\uwpsdl-events.cpp" />
+    <ClCompile Include="..\..\..\backends\events\uwpsdl\winuwp-gesture.cpp" />
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-fs-factory.cpp" />
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-fs.cpp" />
     <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-main.cpp" />
@@ -240,6 +242,8 @@
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-stream.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\backends\events\uwpsdl\uwpsdl-events.h" />
+    <ClInclude Include="..\..\..\backends\events\uwpsdl\winuwp-gesture.h" />
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-fs-factory.h" />
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-fs.h" />
     <ClInclude Include="..\..\..\backends\platform\sdl\winuwp\portdefs.h" />
