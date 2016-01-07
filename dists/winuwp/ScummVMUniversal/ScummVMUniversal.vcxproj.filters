@@ -26,6 +26,9 @@
     <Filter Include="Assets\vkeybd">
       <UniqueIdentifier>{e447c674-ec65-4b70-9ec8-b900b411febc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="backend\events">
+      <UniqueIdentifier>{298ebebd-1286-4ab1-85e0-bd01b64f4980}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -63,11 +66,14 @@
     <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-main.cpp">
       <Filter>backend</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\backends\platform\sdl\winuwp\winuwp-gesture.cpp">
-      <Filter>backend</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\backends\fs\winuwp\winuwp-stream.cpp">
       <Filter>backend</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\backends\events\uwpsdl\uwpsdl-events.cpp">
+      <Filter>backend\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\backends\events\uwpsdl\winuwp-gesture.cpp">
+      <Filter>backend\events</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -82,11 +88,14 @@
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-fs-factory.h">
       <Filter>backend</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\backends\platform\sdl\winuwp\winuwp-gesture.h">
-      <Filter>backend</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\backends\fs\winuwp\winuwp-stream.h">
       <Filter>backend</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\backends\events\uwpsdl\uwpsdl-events.h">
+      <Filter>backend\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\backends\events\uwpsdl\winuwp-gesture.h">
+      <Filter>backend\events</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -9,6 +9,7 @@
 #include "backends\fs\winuwp\winuwp-fs-factory.h"
 #include "backends\mixer\sdl\sdl-mixer.h"
 #include "backends\graphics\winuwpsdl\winuwpsdl-graphics.h"
+#include "backends\events\uwpsdl\uwpsdl-events.h"
 
 using namespace Windows::Storage;
 using namespace Windows::System::Display;
@@ -29,15 +30,19 @@ void OSystem_WinUWP::initBackend() {
 	ConfMan.set("gui_theme", Common::String(WinUWPFilesystemNode::toAscii(installedLocation->Path->Data())) + "\\Assets\\themes\\scummmodern.zip");
 	ConfMan.set("savepath", Common::String(WinUWPFilesystemNode::toAscii(local->Path->Data())) + "\\saves\\");
 	
-	if (!_eventSource) {
-		_eventSource = new SdlEventSource();
-	}
+	if (_eventSource == 0)
+		_eventSource = new UWP::UWPSdlEventSource();
+	if (_eventObserver == 0)
+		_eventObserver = new UWP::UWPSdlEventObserver((UWP::UWPSdlEventSource *)_eventSource);
 
 	if (!_graphicsManager) {
 		_graphicsManager = new WinUWPSdlGraphicsManager(_eventSource, _window);
 	}
 
 	OSystem_SDL::initBackend();
+
+	_eventManager->getEventDispatcher()->registerObserver(_eventObserver, 10, false);
+
 	_gesture = ref new WinUWPGesture();
 
 	SDL_SetHint(SDL_HINT_VIDEO_MINIMIZE_ON_FOCUS_LOSS, "0");
